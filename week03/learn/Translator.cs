@@ -25,6 +25,8 @@ public class Translator
     public void AddWord(string fromWord, string toWord)
     {
         // ADD YOUR CODE HERE
+
+        _words[fromWord] = toWord;
     }
 
     /// <summary>
@@ -35,6 +37,18 @@ public class Translator
     public string Translate(string fromWord)
     {
         // ADD YOUR CODE HERE
-        return "";
+
+        foreach (var word in _words)
+        {
+            var toString = $"{word.Key}";
+
+            Console.WriteLine($"Word Key: {word.Key}");
+
+            if (fromWord != toString)
+            {
+                return "???";
+            }
+        }
+        return _words[fromWord];
     }
 }
