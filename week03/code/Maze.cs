@@ -33,6 +33,16 @@ public class Maze
     public void MoveLeft()
     {
         // FILL IN CODE
+        int newX = _currX - 1;
+
+        if (newX == 0)
+        {
+            Console.WriteLine("Can't go that way!");
+        }
+        else
+        {
+            _currX -= 1;
+        }
     }
 
     /// <summary>
@@ -42,6 +52,17 @@ public class Maze
     public void MoveRight()
     {
         // FILL IN CODE
+
+        int newX = _currX + 1;
+
+        if (newX == 7)
+        {
+            Console.WriteLine("Can't go that way!");
+        }
+        else
+        {
+            _currX += 1;
+        }
     }
 
     /// <summary>
@@ -51,6 +72,17 @@ public class Maze
     public void MoveUp()
     {
         // FILL IN CODE
+
+        int newy = _currY - 1;
+
+        if (newy == 0)
+        {
+            Console.WriteLine("Can't go that way!");
+        }
+        else
+        {
+            _currY -= 1;
+        }
     }
 
     /// <summary>
@@ -60,6 +92,16 @@ public class Maze
     public void MoveDown()
     {
         // FILL IN CODE
+        int newy = _currY + 1;
+
+        if (newy == 7)
+        {
+            Console.WriteLine("Can't go that way!");
+        }
+        else
+        {
+            _currX += 1;
+        }
     }
 
     public string GetStatus()
